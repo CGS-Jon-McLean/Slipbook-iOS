@@ -13,6 +13,7 @@
 		FC6E135C1B64A5950038A7BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6E135B1B64A5950038A7BC /* Images.xcassets */; };
 		FC6E135F1B64A5950038A7BC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6E135D1B64A5950038A7BC /* LaunchScreen.xib */; };
 		FC6E136B1B64A5950038A7BC /* SlipbookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E136A1B64A5950038A7BC /* SlipbookTests.swift */; };
+		FC6E13781B64A63F0038A7BC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6E13771B64A63F0038A7BC /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 		FC6E13641B64A5950038A7BC /* SlipbookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlipbookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6E13691B64A5950038A7BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC6E136A1B64A5950038A7BC /* SlipbookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipbookTests.swift; sourceTree = "<group>"; };
+		FC6E13751B64A63E0038A7BC /* Slipbook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Slipbook-Bridging-Header.h"; sourceTree = "<group>"; };
+		FC6E13761B64A63F0038A7BC /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		FC6E13771B64A63F0038A7BC /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		FC6E13511B64A5950038A7BC /* Slipbook */ = {
 			isa = PBXGroup;
 			children = (
+				FC6E13741B64A62F0038A7BC /* SWReveal */,
 				FC6E13541B64A5950038A7BC /* AppDelegate.swift */,
 				FC6E13561B64A5950038A7BC /* ViewController.swift */,
 				FC6E13581B64A5950038A7BC /* Main.storyboard */,
@@ -110,6 +115,16 @@
 				FC6E13691B64A5950038A7BC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC6E13741B64A62F0038A7BC /* SWReveal */ = {
+			isa = PBXGroup;
+			children = (
+				FC6E13761B64A63F0038A7BC /* SWRevealViewController.h */,
+				FC6E13771B64A63F0038A7BC /* SWRevealViewController.m */,
+				FC6E13751B64A63E0038A7BC /* Slipbook-Bridging-Header.h */,
+			);
+			name = SWReveal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +229,7 @@
 			files = (
 				FC6E13571B64A5950038A7BC /* ViewController.swift in Sources */,
 				FC6E13551B64A5950038A7BC /* AppDelegate.swift in Sources */,
+				FC6E13781B64A63F0038A7BC /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +356,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Slipbook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Slipbook/Slipbook-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +369,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Slipbook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Slipbook/Slipbook-Bridging-Header.h";
 			};
 			name = Release;
 		};
