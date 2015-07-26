@@ -19,17 +19,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="vbC-bg-Qex" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="PFj-n4-dsN"/>
                         <segue destination="myZ-vy-kyV" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="8a5-nD-bfo"/>
+                        <segue destination="vbC-bg-Qex" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="y15-jV-pyE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Table View Controller-->
+        <!--Display View Controller-->
         <scene sceneID="sqT-X7-SsH">
             <objects>
-                <tableViewController id="3bs-5p-f1i" sceneMemberID="viewController">
+                <tableViewController id="3bs-5p-f1i" customClass="DisplayViewController" customModule="Slipbook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="182" sectionHeaderHeight="22" sectionFooterHeight="22" id="O2X-z7-bmj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,15 +41,15 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test cell" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xz4-n6-HEy">
-                                            <rect key="frame" x="381" y="94" width="60" height="21"/>
+                                            <rect key="frame" x="107" y="53" width="60" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="Xz4-n6-HEy" secondAttribute="trailing" constant="159" id="6pn-Yq-hzg"/>
-                                        <constraint firstItem="Xz4-n6-HEy" firstAttribute="top" secondItem="ckU-er-U3g" secondAttribute="topMargin" constant="86" id="8Z0-A7-oom"/>
+                                        <constraint firstAttribute="trailing" secondItem="Xz4-n6-HEy" secondAttribute="trailing" constant="433" id="6pn-Yq-hzg"/>
+                                        <constraint firstItem="Xz4-n6-HEy" firstAttribute="top" secondItem="ckU-er-U3g" secondAttribute="topMargin" constant="45" id="8Z0-A7-oom"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -62,21 +62,24 @@
                     <navigationItem key="navigationItem" id="Nc1-q9-tcF">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="9dr-xX-Ico"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="9dr-xX-Ico" id="T0O-Ie-GXI"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jwq-ot-ZbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1984" y="-601"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Menu Controller-->
         <scene sceneID="Rt1-l9-Qfj">
             <objects>
-                <tableViewController id="vbC-bg-Qex" sceneMemberID="viewController">
+                <tableViewController id="vbC-bg-Qex" customClass="MenuController" customModule="Slipbook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oON-NB-uos">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TITLE" id="IFA-ud-qpn">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IFA-ud-qpn">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IFA-ud-qpn" id="NVz-o7-LyR">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -95,7 +98,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="View Receipts" id="9XB-wE-zgi">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9XB-wE-zgi">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9XB-wE-zgi" id="PfX-ZP-Cav">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -117,7 +120,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Login Cell" id="sjO-17-xbJ">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sjO-17-xbJ">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sjO-17-xbJ" id="bv0-gf-qKy">
                                     <autoresizingMask key="autoresizingMask"/>
