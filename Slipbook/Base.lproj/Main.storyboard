@@ -35,23 +35,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="182" id="xp7-de-Djt">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DisplayCell" rowHeight="182" id="xp7-de-Djt" customClass="DisplayViewCell" customModule="Slipbook" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xp7-de-Djt" id="ckU-er-U3g">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test cell" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xz4-n6-HEy">
-                                            <rect key="frame" x="107" y="53" width="60" height="21"/>
+                                            <rect key="frame" x="8" y="8" width="60" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="Xz4-n6-HEy" secondAttribute="trailing" constant="433" id="6pn-Yq-hzg"/>
-                                        <constraint firstItem="Xz4-n6-HEy" firstAttribute="top" secondItem="ckU-er-U3g" secondAttribute="topMargin" constant="45" id="8Z0-A7-oom"/>
+                                        <constraint firstAttribute="trailing" secondItem="Xz4-n6-HEy" secondAttribute="trailing" constant="532" id="6pn-Yq-hzg"/>
+                                        <constraint firstItem="Xz4-n6-HEy" firstAttribute="top" secondItem="ckU-er-U3g" secondAttribute="topMargin" id="8Z0-A7-oom"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="Xz4-n6-HEy" id="CtB-UO-ZZR"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
