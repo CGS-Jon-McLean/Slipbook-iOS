@@ -14,6 +14,7 @@
 		FC6E135F1B64A5950038A7BC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6E135D1B64A5950038A7BC /* LaunchScreen.xib */; };
 		FC6E136B1B64A5950038A7BC /* SlipbookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E136A1B64A5950038A7BC /* SlipbookTests.swift */; };
 		FC6E13781B64A63F0038A7BC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6E13771B64A63F0038A7BC /* SWRevealViewController.m */; };
+		FC6E137A1B64A8ED0038A7BC /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E13791B64A8ED0038A7BC /* MenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		FC6E13751B64A63E0038A7BC /* Slipbook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Slipbook-Bridging-Header.h"; sourceTree = "<group>"; };
 		FC6E13761B64A63F0038A7BC /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		FC6E13771B64A63F0038A7BC /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		FC6E13791B64A8ED0038A7BC /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				FC6E135B1B64A5950038A7BC /* Images.xcassets */,
 				FC6E135D1B64A5950038A7BC /* LaunchScreen.xib */,
 				FC6E13521B64A5950038A7BC /* Supporting Files */,
+				FC6E13791B64A8ED0038A7BC /* MenuController.swift */,
 			);
 			path = Slipbook;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC6E137A1B64A8ED0038A7BC /* MenuController.swift in Sources */,
 				FC6E13571B64A5950038A7BC /* ViewController.swift in Sources */,
 				FC6E13551B64A5950038A7BC /* AppDelegate.swift in Sources */,
 				FC6E13781B64A63F0038A7BC /* SWRevealViewController.m in Sources */,
