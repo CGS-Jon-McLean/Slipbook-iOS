@@ -15,6 +15,7 @@ class DisplayViewCell: UITableViewCell {
     
     func addCell(nameString: String) {
         name.text = nameString
+        println(nameString)
     }
     
 }
