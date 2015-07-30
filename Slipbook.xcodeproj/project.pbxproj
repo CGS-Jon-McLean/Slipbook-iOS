@@ -15,6 +15,7 @@
 		FC6E13781B64A63F0038A7BC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6E13771B64A63F0038A7BC /* SWRevealViewController.m */; };
 		FC6E137A1B64A8ED0038A7BC /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E13791B64A8ED0038A7BC /* MenuController.swift */; };
 		FC6E137D1B64AB840038A7BC /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E137C1B64AB840038A7BC /* DisplayViewController.swift */; };
+		FC6E137F1B64B4100038A7BC /* DisplayViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E137E1B64B4100038A7BC /* DisplayViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		FC6E13771B64A63F0038A7BC /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		FC6E13791B64A8ED0038A7BC /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		FC6E137C1B64AB840038A7BC /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
+		FC6E137E1B64B4100038A7BC /* DisplayViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				FC6E13521B64A5950038A7BC /* Supporting Files */,
 				FC6E13791B64A8ED0038A7BC /* MenuController.swift */,
 				FC6E137C1B64AB840038A7BC /* DisplayViewController.swift */,
+				FC6E137E1B64B4100038A7BC /* DisplayViewCell.swift */,
 			);
 			path = Slipbook;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				FC6E137A1B64A8ED0038A7BC /* MenuController.swift in Sources */,
 				FC6E13551B64A5950038A7BC /* AppDelegate.swift in Sources */,
 				FC6E13781B64A63F0038A7BC /* SWRevealViewController.m in Sources */,
+				FC6E137F1B64B4100038A7BC /* DisplayViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +438,7 @@
 				FC6E13701B64A5950038A7BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC6E13711B64A5950038A7BC /* Build configuration list for PBXNativeTarget "SlipbookTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +447,7 @@
 				FC6E13731B64A5950038A7BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -17,6 +17,7 @@ class DisplayViewController: UITableViewController {
         super.viewDidLoad()
         
         if self.revealViewController() != nil {
+            println("Thing")
             menuButton.target = revealViewController()
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
@@ -27,4 +28,19 @@ class DisplayViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        println("Cell thing")
+        var cell = tableView.dequeueReusableCellWithIdentifier("DisplayCell", forIndexPath: indexPath) as! DisplayViewCell
+        cell.addCell("test")
+        return cell
+        
+    }
 }
