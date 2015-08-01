@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReceiptLocalManager {
+class SBReceiptLocalManager {
     
     var receipts: Array<Dictionary<String, AnyObject>> = []
     
@@ -38,6 +38,10 @@ class ReceiptLocalManager {
         }else {
             return false
         }
+    }
+    
+    func get(index: Int) -> Dictionary<String, AnyObject> {
+        return receipts[index]
     }
     
     

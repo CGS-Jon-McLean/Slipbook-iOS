@@ -14,9 +14,10 @@ class DisplayViewCell: UITableViewCell {
     @IBOutlet var receiptImage: UIImageView!
     @IBOutlet var name: UILabel!
     
-    func addCell(nameString: String) {
+    func addCell(nameString: String, image: UIImage) {
         name.text = nameString
-        receiptImage.hidden = true
+        receiptImage.hidden = false
+        receiptImage.image = image
         println(nameString)
     }
     

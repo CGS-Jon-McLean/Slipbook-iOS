@@ -66,11 +66,38 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="lO7-Tc-2IH" id="d9T-Qm-8Ix"/>
+                        <segue destination="p3q-Dn-vqT" kind="show" identifier="standardToDetail" id="ILw-wh-wll"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cKv-fP-er0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2091" y="-426"/>
+            <point key="canvasLocation" x="2054" y="-534"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="A9g-Ll-gqo">
+            <objects>
+                <viewController id="p3q-Dn-vqT" customClass="DetailViewController" customModule="Slipbook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RPL-7O-IWt"/>
+                        <viewControllerLayoutGuide type="bottom" id="IuJ-fo-Hq8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fr7-WV-077">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MKM-Dp-hCn">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="MKM-Dp-hCn" id="gX8-MQ-XsP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Wm-gI-rRy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2757" y="-531"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cTc-aZ-IQA">

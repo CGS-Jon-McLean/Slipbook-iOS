@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FC6C3F321B6C5F89003C501A /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C3F311B6C5F89003C501A /* ImageUtils.swift */; };
+		FC6C3F3D1B6C7FCA003C501A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C3F3C1B6C7FCA003C501A /* DetailViewController.swift */; };
+		FC6C3F3F1B6C7FE6003C501A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C3F3E1B6C7FE6003C501A /* Networking.swift */; };
 		FC6E13551B64A5950038A7BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E13541B64A5950038A7BC /* AppDelegate.swift */; };
 		FC6E135A1B64A5950038A7BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6E13581B64A5950038A7BC /* Main.storyboard */; };
 		FC6E135C1B64A5950038A7BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6E135B1B64A5950038A7BC /* Images.xcassets */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		FC6C3F311B6C5F89003C501A /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
+		FC6C3F3C1B6C7FCA003C501A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FC6C3F3E1B6C7FE6003C501A /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		FC6E134F1B64A5950038A7BC /* Slipbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slipbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6E13531B64A5950038A7BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC6E13541B64A5950038A7BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 				FC6E13521B64A5950038A7BC /* Supporting Files */,
 				FCF4AA6F1B6A1FE7005C89F3 /* ReceiptLocalManager.swift */,
 				FC6C3F311B6C5F89003C501A /* ImageUtils.swift */,
+				FC6C3F3E1B6C7FE6003C501A /* Networking.swift */,
+				FC6C3F3C1B6C7FCA003C501A /* DetailViewController.swift */,
 			);
 			path = Slipbook;
 			sourceTree = "<group>";
@@ -233,9 +239,11 @@
 			files = (
 				FC6E13551B64A5950038A7BC /* AppDelegate.swift in Sources */,
 				FCF4AA6E1B6A1F49005C89F3 /* DisplayViewController.swift in Sources */,
+				FC6C3F3D1B6C7FCA003C501A /* DetailViewController.swift in Sources */,
 				FCF4AA701B6A1FE7005C89F3 /* ReceiptLocalManager.swift in Sources */,
 				FC6C3F321B6C5F89003C501A /* ImageUtils.swift in Sources */,
 				FC6E137F1B64B4100038A7BC /* DisplayViewCell.swift in Sources */,
+				FC6C3F3F1B6C7FE6003C501A /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

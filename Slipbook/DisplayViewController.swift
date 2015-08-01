@@ -12,7 +12,8 @@ class DisplayViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet var tableView: UITableView!
     
-    var local = ReceiptLocalManager()
+    var local = SBReceiptLocalManager()
+    var index: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,17 +35,6 @@ class DisplayViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.didReceiveMemoryWarning()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -55,10 +45,22 @@ class DisplayViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("ReceiptCell", forIndexPath: indexPath) as! DisplayViewCell
-        cell.addCell("Receipt 1")
+        cell.addCell("Receipt 1", image: UIImage(named: "menu")!)
         return cell
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("Cell found at \(indexPath.row) selected")
+        index = indexPath.row
+        performSegueWithIdentifier("standardToDetail", sender: self)
+    }
     
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "standardToDetail") {
+            var controller = segue.destinationViewController as! DetailViewController
+            controller.index = index
+        }
+    }
+    
+    
 }

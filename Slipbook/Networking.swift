@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Networking{
+class SBNetworking{
     
     func getResult(urlPath:String) -> NSDictionary {
         var url: NSURL = NSURL(string: urlPath)!
@@ -18,7 +18,7 @@ class Networking{
         var dataVal: NSData =  NSURLConnection.sendSynchronousRequest(request1, returningResponse: response, error:nil)!
         var err: NSError
         println(response)
-        var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataVal, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+        var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataVal, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
         println("Synchronous \(jsonResult)")
         return jsonResult
     }
