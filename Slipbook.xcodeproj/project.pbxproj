@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B320DD811B6C85130023A34C /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = B320DD801B6C85130023A34C /* Search.swift */; };
 		FC6C3F321B6C5F89003C501A /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C3F311B6C5F89003C501A /* ImageUtils.swift */; };
 		FC6E13551B64A5950038A7BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E13541B64A5950038A7BC /* AppDelegate.swift */; };
 		FC6E135A1B64A5950038A7BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6E13581B64A5950038A7BC /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B320DD801B6C85130023A34C /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		FC6C3F311B6C5F89003C501A /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
 		FC6E134F1B64A5950038A7BC /* Slipbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slipbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6E13531B64A5950038A7BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				FC6E13521B64A5950038A7BC /* Supporting Files */,
 				FCF4AA6F1B6A1FE7005C89F3 /* ReceiptLocalManager.swift */,
 				FC6C3F311B6C5F89003C501A /* ImageUtils.swift */,
+				B320DD801B6C85130023A34C /* Search.swift */,
 			);
 			path = Slipbook;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				FC6E13551B64A5950038A7BC /* AppDelegate.swift in Sources */,
 				FCF4AA6E1B6A1F49005C89F3 /* DisplayViewController.swift in Sources */,
 				FCF4AA701B6A1FE7005C89F3 /* ReceiptLocalManager.swift in Sources */,
+				B320DD811B6C85130023A34C /* Search.swift in Sources */,
 				FC6C3F321B6C5F89003C501A /* ImageUtils.swift in Sources */,
 				FC6E137F1B64B4100038A7BC /* DisplayViewCell.swift in Sources */,
 			);
