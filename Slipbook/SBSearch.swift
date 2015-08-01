@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Search{
+class SBSearch{
     func searchDictionary(searchArray:Array<Dictionary<String, AnyObject>>, keys:Array<String>, queryString:String) -> Array<Dictionary<String, AnyObject>>?{
         
         var returnArray:Array<Dictionary<String, AnyObject>> = []

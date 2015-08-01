@@ -8,25 +8,28 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class SBDetailViewController: UIViewController {
     
     var index: Int = 1
     
     var local = SBReceiptLocalManager()
     
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var addButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         local.load()
         println(index)
         fill()
-        // Do any additional setup after loading the view.
+        
+        // setting button as circular
+        self.addButton.layer.cornerRadius = 0.5 * self.addButton.bounds.size.width
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func fill() {
@@ -39,8 +42,12 @@ class DetailViewController: UIViewController {
         //println(imageData)
         imageView.image = image
     }
-    
 
+    @IBAction func menuButton(sender: AnyObject) {
+        
+        
+        
+    }
     /*
     // MARK: - Navigation
 

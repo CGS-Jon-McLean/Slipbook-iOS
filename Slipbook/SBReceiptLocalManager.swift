@@ -13,13 +13,13 @@ class SBReceiptLocalManager {
     var receipts: Array<Dictionary<String, AnyObject>> = []
     
     private var ud = NSUserDefaults.standardUserDefaults()
-    private var utils = ImageToData()
+    private var utils = SBImageToData()
     
-    func addReceipt(name: String, image: UIImage, dateTaken: String, spent: String) {
+    func addReceipt(name: String, image: UIImage, dateTaken: String, spent: String, category: String) {
         
         var data = utils.imageToData(image)
         
-        receipts.append(["name": name, "image": data, "dateTaken": dateTaken, "spent": spent])
+        receipts.append(["name": name, "image": data, "dateTaken": dateTaken, "spent": spent, "category": category])
     }
     
     func save() {

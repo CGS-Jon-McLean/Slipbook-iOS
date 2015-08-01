@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageToData {
+class SBImageToData {
     
     func imageToData(imageToConvert: UIImage) -> NSData {
         var compQuality: CGFloat = 0.8

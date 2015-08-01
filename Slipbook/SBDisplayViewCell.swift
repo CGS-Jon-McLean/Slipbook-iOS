@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DisplayViewCell: UITableViewCell {
+class SBDisplayViewCell: UITableViewCell {
     
     
     @IBOutlet var receiptImage: UIImageView!
