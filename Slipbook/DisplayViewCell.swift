@@ -11,10 +11,12 @@ import UIKit
 class DisplayViewCell: UITableViewCell {
     
     
+    @IBOutlet var receiptImage: UIImageView!
     @IBOutlet var name: UILabel!
     
     func addCell(nameString: String) {
         name.text = nameString
+        receiptImage.hidden = true
         println(nameString)
     }
     

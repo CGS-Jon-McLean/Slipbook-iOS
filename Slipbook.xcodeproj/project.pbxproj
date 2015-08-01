@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC6C3F321B6C5F89003C501A /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C3F311B6C5F89003C501A /* ImageUtils.swift */; };
 		FC6E13551B64A5950038A7BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E13541B64A5950038A7BC /* AppDelegate.swift */; };
 		FC6E135A1B64A5950038A7BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6E13581B64A5950038A7BC /* Main.storyboard */; };
 		FC6E135C1B64A5950038A7BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6E135B1B64A5950038A7BC /* Images.xcassets */; };
 		FC6E135F1B64A5950038A7BC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6E135D1B64A5950038A7BC /* LaunchScreen.xib */; };
 		FC6E136B1B64A5950038A7BC /* SlipbookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E136A1B64A5950038A7BC /* SlipbookTests.swift */; };
-		FC6E137D1B64AB840038A7BC /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E137C1B64AB840038A7BC /* DisplayViewController.swift */; };
 		FC6E137F1B64B4100038A7BC /* DisplayViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E137E1B64B4100038A7BC /* DisplayViewCell.swift */; };
+		FCF4AA6E1B6A1F49005C89F3 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF4AA6D1B6A1F49005C89F3 /* DisplayViewController.swift */; };
+		FCF4AA701B6A1FE7005C89F3 /* ReceiptLocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF4AA6F1B6A1FE7005C89F3 /* ReceiptLocalManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC6C3F311B6C5F89003C501A /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
 		FC6E134F1B64A5950038A7BC /* Slipbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slipbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6E13531B64A5950038A7BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC6E13541B64A5950038A7BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,8 +39,10 @@
 		FC6E13641B64A5950038A7BC /* SlipbookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlipbookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6E13691B64A5950038A7BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC6E136A1B64A5950038A7BC /* SlipbookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipbookTests.swift; sourceTree = "<group>"; };
-		FC6E137C1B64AB840038A7BC /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		FC6E137E1B64B4100038A7BC /* DisplayViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewCell.swift; sourceTree = "<group>"; };
+		FCF4AA6D1B6A1F49005C89F3 /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
+		FCF4AA6F1B6A1FE7005C89F3 /* ReceiptLocalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptLocalManager.swift; sourceTree = "<group>"; };
+		FCF4AA711B6A2220005C89F3 /* Slipbook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Slipbook-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC6C3F331B6C61D1003C501A /* ignore */ = {
+			isa = PBXGroup;
+			children = (
+				FCF4AA711B6A2220005C89F3 /* Slipbook-Bridging-Header.h */,
+			);
+			name = ignore;
+			sourceTree = "<group>";
+		};
 		FC6E13461B64A5950038A7BC = {
 			isa = PBXGroup;
 			children = (
@@ -79,13 +92,16 @@
 		FC6E13511B64A5950038A7BC /* Slipbook */ = {
 			isa = PBXGroup;
 			children = (
+				FC6C3F331B6C61D1003C501A /* ignore */,
 				FC6E13541B64A5950038A7BC /* AppDelegate.swift */,
 				FC6E13581B64A5950038A7BC /* Main.storyboard */,
 				FC6E135B1B64A5950038A7BC /* Images.xcassets */,
 				FC6E135D1B64A5950038A7BC /* LaunchScreen.xib */,
-				FC6E13521B64A5950038A7BC /* Supporting Files */,
-				FC6E137C1B64AB840038A7BC /* DisplayViewController.swift */,
 				FC6E137E1B64B4100038A7BC /* DisplayViewCell.swift */,
+				FCF4AA6D1B6A1F49005C89F3 /* DisplayViewController.swift */,
+				FC6E13521B64A5950038A7BC /* Supporting Files */,
+				FCF4AA6F1B6A1FE7005C89F3 /* ReceiptLocalManager.swift */,
+				FC6C3F311B6C5F89003C501A /* ImageUtils.swift */,
 			);
 			path = Slipbook;
 			sourceTree = "<group>";
@@ -215,8 +231,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC6E137D1B64AB840038A7BC /* DisplayViewController.swift in Sources */,
 				FC6E13551B64A5950038A7BC /* AppDelegate.swift in Sources */,
+				FCF4AA6E1B6A1F49005C89F3 /* DisplayViewController.swift in Sources */,
+				FCF4AA701B6A1FE7005C89F3 /* ReceiptLocalManager.swift in Sources */,
+				FC6C3F321B6C5F89003C501A /* ImageUtils.swift in Sources */,
 				FC6E137F1B64B4100038A7BC /* DisplayViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
