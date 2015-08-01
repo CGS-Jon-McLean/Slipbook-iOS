@@ -12,14 +12,28 @@ class Search{
     func searchDictionary(searchArray:Array<Dictionary<String, AnyObject>>, keys:Array<String>, queryString:String) -> Array<Dictionary<String, AnyObject>>?{
         
         var returnArray:Array<Dictionary<String, AnyObject>> = []
-        let query=queryString.lowercaseString
+        let query=split(queryString.lowercaseString){$0 == " "}
         
         for(var i=0;i<searchArray.count;i++){
             for(var x=0;x<keys.count;x++){
-                let current: String=(searchArray[i][keys[x]] as! String).lowercaseString
-                if(current==query){
-                    returnArray.append(searchArray[i])
-                    i=searchArray.count
+                var current: String=split((searchArray[i][keys[x]] as String).lowercaseString){$0 == " "}
+                var queryFound=true;
+                for(var y=0;y<query.count;y++){
+                    var queryFoundLocal=false
+                    for(var z=0;z<current.count;z++){
+                        if(current[z].rangeOfString(query[y]) != nil){
+                            queryFoundLocal=true
+                      
+                        }
+                    }
+                    if(!queryFoundLocal){
+                        queryFound=false
+                        y=query.count
+                    }
+                }
+                if(queryFound){
+                    returnArray.append(searchArray[i]);
+                    x=keys.count
                 }
             }
         }
