@@ -23,9 +23,6 @@ class SBDetailViewController: UIViewController {
         println(index)
         fill()
         
-        // setting button as circular
-        self.addButton.layer.cornerRadius = 0.5 * self.addButton.bounds.size.width
-        
     }
 
     override func didReceiveMemoryWarning() {

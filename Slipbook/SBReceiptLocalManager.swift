@@ -10,29 +10,33 @@ import UIKit
 
 class SBReceiptLocalManager {
     
-    var receipts: Array<Dictionary<String, AnyObject>> = []
+    var utils = SBImageToData()
     
-    private var ud = NSUserDefaults.standardUserDefaults()
-    private var utils = SBImageToData()
+    var receipts: Array<Dictionary<String, AnyObject>> = []
     
     func addReceipt(name: String, image: UIImage, dateTaken: String, spent: String, category: String) {
         
         var data = utils.imageToData(image)
+        var dict = ["name": name, "image": data, "dateTaken": dateTaken, "spent": spent, "category": category]
         
-        receipts.append(["name": name, "image": data, "dateTaken": dateTaken, "spent": spent, "category": category])
+        self.load()
+        receipts.append(dict)
     }
     
     func save() {
+        var ud = NSUserDefaults.standardUserDefaults()
         ud.setValue(receipts, forKey: "receiptsArray")
         ud.synchronize()
     }
     
     func load() {
+        var ud = NSUserDefaults.standardUserDefaults()
         receipts = ud.valueForKey("receiptsArray") as! Array<Dictionary<String, AnyObject>>
         ud.synchronize()
     }
     
     func doesExist() -> Bool {
+        var ud = NSUserDefaults.standardUserDefaults()
         if(ud.valueForKey("receiptsArray") != nil) {
             return true
         }else {

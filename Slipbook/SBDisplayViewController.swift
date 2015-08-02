@@ -17,19 +17,30 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var capturedImage: UIImage?
     
+    var utils = SBImageToData()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: true)
         
         tableView.delegate = self
         tableView.dataSource = self
         
         if(local.doesExist()) {
             local.load()
+            for i in 0..<local.receipts.count {
+                var dict = local.receipts[i]
+                //println(dict)
+                //println("Index: \(i)")
+                //var name = dict["name"] as! String
+                //println("Name: \(name) at index \(i)")
+                
+            }
         }else {
             println("No NSUserDefault found...")
-            local.addReceipt("Hello", image: UIImage(named: "menu")!, dateTaken: "12/7/15", spent: "12.00", category: "thing")
-            local.save()
         }
+        
+        
         
     }
 
@@ -42,15 +53,17 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        println(local.receipts.count)
         return local.receipts.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("ReceiptCell", forIndexPath: indexPath) as! SBDisplayViewCell
-        var dict = local.get(indexPath.row)
+        var dict = local.receipts[indexPath.row]
         var name = dict["name"] as! String
-        var img = dict["image"] as! UIImage
-        cell.addCell(name, image: img)
+        var img = dict["image"] as! NSData
+        var image = utils.dataToImage(img)
+        cell.addCell(name, image: image)
         return cell
     }
     

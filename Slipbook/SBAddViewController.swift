@@ -22,6 +22,7 @@ class SBAddViewController: UIViewController {
     var image: UIImage?
     
     var local = SBReceiptLocalManager()
+    var utils = SBImageToData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +55,9 @@ class SBAddViewController: UIViewController {
         
         local.addReceipt(nameField.text, image: image!, dateTaken: stringDate, spent: amountSpentField.text, category: categoryField.text)
         local.save()
+        var byte = NSByteCountFormatter()
+        var data = utils.imageToData(image!)
+        println(data.length)
         
         performSegueWithIdentifier("addToStandard", sender: self)
     }
