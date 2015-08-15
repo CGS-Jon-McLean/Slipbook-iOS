@@ -86,6 +86,7 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
         if(segue.identifier == "standardToAdd") {
             var controller = segue.destinationViewController as! SBAddViewController
             controller.image = capturedImage
+            println("Executed standardToAdd segue")
         }
     }
     
@@ -108,6 +109,7 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func openCamera() {
+        println("Open Camera function run")
         if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
             var imag = UIImagePickerController()
             imag.delegate = self
