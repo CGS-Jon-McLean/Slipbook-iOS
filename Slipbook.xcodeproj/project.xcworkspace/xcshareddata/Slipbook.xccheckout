@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>83726136-D4CE-4A68-8F1D-3148CE0DE246</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Slipbook</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>B8EAD7241B52EB5EFAAC367674D74F1D409B2BDE</key>
 		<string>https://github.com/CGS-Jon-McLean/Slipbook-iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Slipbook.xcodeproj/project.xcworkspace</string>
+	<string>Slipbook.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>B8EAD7241B52EB5EFAAC367674D74F1D409B2BDE</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>B8EAD7241B52EB5EFAAC367674D74F1D409B2BDE</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Slipbook</string>
+			<string>Slipbook-iOS</string>
 		</dict>
 	</array>
 </dict>
