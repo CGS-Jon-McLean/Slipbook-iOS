@@ -22,6 +22,12 @@ class SBDetailViewController: UIViewController {
         local.load()
         println(index)
         fill()
+        //self.navigationController?.hidesBarsOnTap = true
+        
+        var button: UIBarButtonItem! = UIBarButtonItem(image: UIImage(named: "category"), style: UIBarButtonItemStyle.Plain, target: self, action: Selector("showSelections"))
+        //button.image = UIImage(named: "category")!
+        //button.style = UIBarButtonItemStyle.Bordered
+        self.navigationItem.rightBarButtonItem = button
         
     }
 
@@ -39,20 +45,33 @@ class SBDetailViewController: UIViewController {
         //println(imageData)
         imageView.image = image
     }
-
-    @IBAction func menuButton(sender: AnyObject) {
+    
+    func showSelections() {
+        var actionSheet = UIAlertController(title: "Options", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+        var infoAction = UIAlertAction(title: "Show/Edit Information", style: UIAlertActionStyle.Default, handler: { UIAlertAction in
+            self.showInfo()
+        })
+        var statsAction = UIAlertAction(title: "Show Statistics", style: UIAlertActionStyle.Default, handler: { UIAlertAction in
+            // open stats page
+        })
         
+        var cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: { UIAlertAction in
         
+        })
+        actionSheet.addAction(infoAction)
+        actionSheet.addAction(statsAction)
         
+        self.presentViewController(actionSheet, animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    func showInfo() {
+        performSegueWithIdentifier("detailToEdit", sender: self)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if(segue.identifier == "detailToEdit") {
+            var controller = segue.destinationViewController as! SBShowEditInfoViewController
+            controller.index = self.index
+        }
     }
-    */
-
 }

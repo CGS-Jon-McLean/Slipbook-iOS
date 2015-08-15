@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC5CF0921B7DA17C009324BC /* SlipbookDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC5CF0901B7DA17C009324BC /* SlipbookDataModel.xcdatamodeld */; };
+		FC5CF0941B7DA439009324BC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5CF0931B7DA439009324BC /* CoreData.framework */; };
 		FC6C3F321B6C5F89003C501A /* SBImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C3F311B6C5F89003C501A /* SBImageUtils.swift */; };
 		FC6C3F3D1B6C7FCA003C501A /* SBDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C3F3C1B6C7FCA003C501A /* SBDetailViewController.swift */; };
 		FC6C3F3F1B6C7FE6003C501A /* SBNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C3F3E1B6C7FE6003C501A /* SBNetworking.swift */; };
@@ -62,6 +64,7 @@
 		FC6E135F1B64A5950038A7BC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6E135D1B64A5950038A7BC /* LaunchScreen.xib */; };
 		FC6E136B1B64A5950038A7BC /* SlipbookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E136A1B64A5950038A7BC /* SlipbookTests.swift */; };
 		FC6E137F1B64B4100038A7BC /* SBDisplayViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E137E1B64B4100038A7BC /* SBDisplayViewCell.swift */; };
+		FC969C3D1B7DF4E100659D6D /* SBCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC969C3C1B7DF4E100659D6D /* SBCoreData.swift */; };
 		FCF412B61B6DDF210035F5A5 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = FCF412A11B6DDF210035F5A5 /* Contents.json */; };
 		FCF412B71B6DDF210035F5A5 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = FCF412A21B6DDF210035F5A5 /* Icon-40.png */; };
 		FCF412B81B6DDF210035F5A5 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCF412A31B6DDF210035F5A5 /* Icon-40@2x.png */; };
@@ -82,7 +85,7 @@
 		FCF412C71B6DDF210035F5A5 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCF412B21B6DDF210035F5A5 /* Icon@2x.png */; };
 		FCF412C81B6DDF210035F5A5 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = FCF412B31B6DDF210035F5A5 /* iTunesArtwork.png */; };
 		FCF412C91B6DDF210035F5A5 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCF412B41B6DDF210035F5A5 /* iTunesArtwork@2x.png */; };
-		FCF412CA1B6DDF210035F5A5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FCF412B51B6DDF210035F5A5 /* README.md */; };
+		FCF412CC1B6E0D350035F5A5 /* SBShowEditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF412CB1B6E0D350035F5A5 /* SBShowEditInfoViewController.swift */; };
 		FCF4AA6E1B6A1F49005C89F3 /* SBDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF4AA6D1B6A1F49005C89F3 /* SBDisplayViewController.swift */; };
 		FCF4AA701B6A1FE7005C89F3 /* SBReceiptLocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF4AA6F1B6A1FE7005C89F3 /* SBReceiptLocalManager.swift */; };
 /* End PBXBuildFile section */
@@ -98,6 +101,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC5CF0911B7DA17C009324BC /* SlipbookDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SlipbookDataModel.xcdatamodel; sourceTree = "<group>"; };
+		FC5CF0931B7DA439009324BC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FC6C3F311B6C5F89003C501A /* SBImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBImageUtils.swift; sourceTree = "<group>"; };
 		FC6C3F3C1B6C7FCA003C501A /* SBDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDetailViewController.swift; sourceTree = "<group>"; };
 		FC6C3F3E1B6C7FE6003C501A /* SBNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBNetworking.swift; sourceTree = "<group>"; };
@@ -157,6 +162,7 @@
 		FC6E13691B64A5950038A7BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC6E136A1B64A5950038A7BC /* SlipbookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipbookTests.swift; sourceTree = "<group>"; };
 		FC6E137E1B64B4100038A7BC /* SBDisplayViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDisplayViewCell.swift; sourceTree = "<group>"; };
+		FC969C3C1B7DF4E100659D6D /* SBCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCoreData.swift; sourceTree = "<group>"; };
 		FCF412A11B6DDF210035F5A5 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		FCF412A21B6DDF210035F5A5 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		FCF412A31B6DDF210035F5A5 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 		FCF412B31B6DDF210035F5A5 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		FCF412B41B6DDF210035F5A5 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		FCF412B51B6DDF210035F5A5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FCF412CB1B6E0D350035F5A5 /* SBShowEditInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBShowEditInfoViewController.swift; sourceTree = "<group>"; };
 		FCF4AA6D1B6A1F49005C89F3 /* SBDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDisplayViewController.swift; sourceTree = "<group>"; };
 		FCF4AA6F1B6A1FE7005C89F3 /* SBReceiptLocalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBReceiptLocalManager.swift; sourceTree = "<group>"; };
 		FCF4AA711B6A2220005C89F3 /* Slipbook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Slipbook-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -188,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC5CF0941B7DA439009324BC /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +270,7 @@
 		FC6E13461B64A5950038A7BC = {
 			isa = PBXGroup;
 			children = (
+				FC5CF0931B7DA439009324BC /* CoreData.framework */,
 				FC6E13511B64A5950038A7BC /* Slipbook */,
 				FC6E13671B64A5950038A7BC /* SlipbookTests */,
 				FC6E13501B64A5950038A7BC /* Products */,
@@ -280,21 +289,23 @@
 		FC6E13511B64A5950038A7BC /* Slipbook */ = {
 			isa = PBXGroup;
 			children = (
+				FC969C3B1B7DF4B000659D6D /* phased */,
 				FC6C3F331B6C61D1003C501A /* ignore */,
+				FC5CF0901B7DA17C009324BC /* SlipbookDataModel.xcdatamodeld */,
 				FC6E13541B64A5950038A7BC /* AppDelegate.swift */,
 				FC6E13581B64A5950038A7BC /* Main.storyboard */,
 				FC6E135B1B64A5950038A7BC /* Images.xcassets */,
 				FC6E135D1B64A5950038A7BC /* LaunchScreen.xib */,
 				FC6E137E1B64B4100038A7BC /* SBDisplayViewCell.swift */,
 				FCF4AA6D1B6A1F49005C89F3 /* SBDisplayViewController.swift */,
-				FCF4AA6F1B6A1FE7005C89F3 /* SBReceiptLocalManager.swift */,
 				FC6C3F311B6C5F89003C501A /* SBImageUtils.swift */,
 				FC6C3F3E1B6C7FE6003C501A /* SBNetworking.swift */,
 				FC6C3F991B6C8DD0003C501A /* SBSearch.swift */,
 				FC6C3F3C1B6C7FCA003C501A /* SBDetailViewController.swift */,
 				FC6C3F9B1B6CAB18003C501A /* SBAddViewController.swift */,
-				FC6C3F9F1B6CAB43003C501A /* SBTempFieldSave.swift */,
+				FCF412CB1B6E0D350035F5A5 /* SBShowEditInfoViewController.swift */,
 				FC6E13521B64A5950038A7BC /* Supporting Files */,
+				FC969C3C1B7DF4E100659D6D /* SBCoreData.swift */,
 			);
 			path = Slipbook;
 			sourceTree = "<group>";
@@ -324,6 +335,15 @@
 				FC6E13691B64A5950038A7BC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC969C3B1B7DF4B000659D6D /* phased */ = {
+			isa = PBXGroup;
+			children = (
+				FCF4AA6F1B6A1FE7005C89F3 /* SBReceiptLocalManager.swift */,
+				FC6C3F9F1B6CAB43003C501A /* SBTempFieldSave.swift */,
+			);
+			name = phased;
 			sourceTree = "<group>";
 		};
 		FCF4129F1B6DDF210035F5A5 /* ios */ = {
@@ -528,15 +548,17 @@
 			files = (
 				FC6C3FA01B6CAB43003C501A /* SBTempFieldSave.swift in Sources */,
 				FC6E13551B64A5950038A7BC /* AppDelegate.swift in Sources */,
+				FCF412CC1B6E0D350035F5A5 /* SBShowEditInfoViewController.swift in Sources */,
 				FCF4AA6E1B6A1F49005C89F3 /* SBDisplayViewController.swift in Sources */,
 				FC6C3F3D1B6C7FCA003C501A /* SBDetailViewController.swift in Sources */,
 				FCF4AA701B6A1FE7005C89F3 /* SBReceiptLocalManager.swift in Sources */,
 				FC6C3F321B6C5F89003C501A /* SBImageUtils.swift in Sources */,
 				FC6C3F9A1B6C8DD0003C501A /* SBSearch.swift in Sources */,
+				FC5CF0921B7DA17C009324BC /* SlipbookDataModel.xcdatamodeld in Sources */,
 				FC6C3F9C1B6CAB18003C501A /* SBAddViewController.swift in Sources */,
 				FC6E137F1B64B4100038A7BC /* SBDisplayViewCell.swift in Sources */,
-				FCF412CA1B6DDF210035F5A5 /* README.md in Sources */,
 				FC6C3F3F1B6C7FE6003C501A /* SBNetworking.swift in Sources */,
+				FC969C3D1B7DF4E100659D6D /* SBCoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -755,6 +777,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FC5CF0901B7DA17C009324BC /* SlipbookDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FC5CF0911B7DA17C009324BC /* SlipbookDataModel.xcdatamodel */,
+			);
+			currentVersion = FC5CF0911B7DA17C009324BC /* SlipbookDataModel.xcdatamodel */;
+			path = SlipbookDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FC6E13471B64A5950038A7BC /* Project object */;
 }

@@ -38,6 +38,10 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
             }
         }else {
             println("No NSUserDefault found...")
+            //var imageThing = UIImage(named: "category")
+            //local.addReceipt("Hello", image: imageThing!, dateTaken: "0", spent: "0", category: "0")
+            //local.save()
+            println("test")
         }
         
         
