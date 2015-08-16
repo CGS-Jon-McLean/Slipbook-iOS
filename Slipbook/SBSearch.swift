@@ -16,7 +16,7 @@ class SBSearch{
         
         for(var i=0;i<searchArray.count;i++){
             for(var x=0;x<keys.count;x++){
-                var current=split((searchArray[i][keys[x]] as! String).lowercaseString){$0 == " "}
+                var current=split((searchArray[i][keys[x]] as String).lowercaseString){$0 == " "}
                 var queryFound=true;
                 for(var y=0;y<query.count;y++){
                     var queryFoundLocal=false
