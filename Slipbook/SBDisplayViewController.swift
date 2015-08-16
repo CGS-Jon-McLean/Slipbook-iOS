@@ -19,6 +19,9 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var utils = SBImageToData()
     
+    var storeSort: Bool = false
+    var store: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)

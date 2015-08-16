@@ -15,7 +15,7 @@ class SBCoreData {
     
     var receipts: Array<Dictionary<String, AnyObject>> = []
     
-    func save(name: String, image: UIImage, dateTaken: NSDate, spent: String, category: String) {
+    func save(name: String, image: UIImage, dateTaken: NSDate, spent: String, category: String, store: String) {
         
         let AD: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context: NSManagedObjectContext = AD.managedObjectContext!
@@ -28,6 +28,7 @@ class SBCoreData {
         newReceipt.setValue(spent, forKey: "spent")
         newReceipt.setValue(category, forKey: "category")
         newReceipt.setValue(imageData, forKey: "image")
+        newReceipt.setValue(store, forKey: "store")
     }
     
     func loadAndReturn() -> Array<Dictionary<String, AnyObject>> {
@@ -58,7 +59,8 @@ class SBCoreData {
                 var category = result.valueForKey("category") as! String
                 var dateTaken = result.valueForKey("dateTaken") as! NSDate
                 var imageData = result.valueForKey("image") as! NSData
-                var dictionary = ["name": name, "spent": spent, "category": category, "dateTaken": dateTaken, "image": imageData]
+                var store = result.valueForKey("store") as! String
+                var dictionary = ["name": name, "spent": spent, "category": category, "dateTaken": dateTaken, "image": imageData, "store": store]
                 array.append(dictionary)
             }
         }
@@ -93,11 +95,35 @@ class SBCoreData {
                 var category = result.valueForKey("category") as! String
                 var dateTaken = result.valueForKey("dateTaken") as! NSDate
                 var imageData = result.valueForKey("image") as! NSData
-                var dictionary = ["name": name, "spent": spent, "category": category, "dateTaken": dateTaken, "image": imageData]
+                var store = result.valueForKey("store") as! String
+                var dictionary = ["name": name, "spent": spent, "category": category, "dateTaken": dateTaken, "image": imageData, "store": store]
                 temp.append(dictionary)
             }
         }
         self.receipts = temp
     }
     
+    func countElements() -> Int {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context = appDelegate.managedObjectContext!
+        
+        var request = NSFetchRequest(entityName: "Receipt")
+        request = NSFetchRequest(entityName: "Receipt")
+        
+        request.returnsObjectsAsFaults = false
+        
+        var error: NSError?
+        
+        var results = context.executeFetchRequest(request, error: &error)
+        
+        if(error != nil) {
+            println("An error occured while fetching the results from the Core Data Model.")
+        }
+        
+        if(results == nil) {
+            return 0
+        }
+        
+        return results!.count
+    }
 }
