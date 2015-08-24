@@ -10,10 +10,14 @@ import UIKit
 
 class SBStoreDisplayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    // MARK: Variables and Outlets
+    
     var coreData = SBCoreData()
+    var storeToSortBy: String = ""
+    
     @IBOutlet var tableView: UITableView!
     
-    var storeToSortBy: String = ""
+    // MARK: View Controller Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +53,8 @@ class SBStoreDisplayViewController: UIViewController, UITableViewDelegate, UITab
         self.performSegueWithIdentifier("storeToStandardSORT", sender: self)
         
     }
+    
+    // MARK: Segue Preparation Methods
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "storeToStandardSORT") {

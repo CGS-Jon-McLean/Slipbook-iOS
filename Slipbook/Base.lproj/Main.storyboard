@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJX-hp-0dt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJX-hp-0dt">
                                 <rect key="frame" x="239" y="111" width="123" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="123" id="Boi-gl-aCG"/>
@@ -26,7 +26,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="78g-PQ-14y">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="78g-PQ-14y">
                                 <rect key="frame" x="235" y="140" width="131" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="131" id="hnC-gg-VmS"/>
@@ -34,23 +34,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rIY-Pu-ISm">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rIY-Pu-ISm">
                                 <rect key="frame" x="235" y="215" width="131" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StX-Dx-bCF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Category: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StX-Dx-bCF">
                                 <rect key="frame" x="243" y="261" width="115" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aN1-Qk-blO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aN1-Qk-blO">
                                 <rect key="frame" x="235" y="290" width="131" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount Spent:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gP5-RC-uhR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Amount Spent:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gP5-RC-uhR">
                                 <rect key="frame" x="243" y="186" width="115" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -76,18 +76,16 @@
                             <constraint firstItem="aN1-Qk-blO" firstAttribute="leading" secondItem="rIY-Pu-ISm" secondAttribute="leading" id="w7t-Mc-E7i"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add" id="dHH-lX-aP7"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Add" id="dHH-lX-aP7"/>
                     <navigationItem key="navigationItem" id="O22-Va-mjT">
                         <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="vLV-PP-2Ox">
                             <connections>
                                 <action selector="cancelButton:" destination="9K7-g6-gya" id="j6o-OZ-bpm"/>
-                                <segue destination="Imk-Zl-UeV" kind="show" id="n5D-M9-D8e"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="done" id="gak-bi-4vc">
                             <connections>
                                 <action selector="doneButton:" destination="9K7-g6-gya" id="ju1-3i-U4r"/>
-                                <segue destination="Imk-Zl-UeV" kind="show" id="BFM-ST-8SK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -99,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fvd-GX-C7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3804" y="791"/>
+            <point key="canvasLocation" x="3804" y="790.99999999999977"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="lcR-h3-Rzd">
@@ -121,7 +119,7 @@
             </objects>
             <point key="canvasLocation" x="3020" y="1464"/>
         </scene>
-        <!--Standard-->
+        <!--Test Title-->
         <scene sceneID="s66-6N-2bZ">
             <objects>
                 <viewController id="Imk-Zl-UeV" customClass="SBDisplayViewController" customModule="Slipbook" customModuleProvider="target" sceneMemberID="viewController">
@@ -133,7 +131,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lO7-Tc-2IH">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lO7-Tc-2IH">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -177,28 +175,27 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lO7-Tc-2IH" firstAttribute="bottom" secondItem="H6M-ay-0IU" secondAttribute="top" id="3cl-l9-OyQ"/>
+                            <constraint firstItem="lO7-Tc-2IH" firstAttribute="bottom" secondItem="H6M-ay-0IU" secondAttribute="top" constant="44" id="3cl-l9-OyQ"/>
                             <constraint firstItem="lO7-Tc-2IH" firstAttribute="top" secondItem="Gq8-FN-9WN" secondAttribute="top" id="83w-bf-DUK"/>
                             <constraint firstItem="lO7-Tc-2IH" firstAttribute="leading" secondItem="Gq8-FN-9WN" secondAttribute="leading" id="CAu-4Z-oOo"/>
                             <constraint firstAttribute="trailing" secondItem="lO7-Tc-2IH" secondAttribute="trailing" id="lIp-tJ-rGU"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Standard" id="Rkn-t4-nDP"/>
-                    <navigationItem key="navigationItem" id="nma-2H-23s">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hHA-ga-4bx">
-                            <connections>
-                                <action selector="switchToAdd:" destination="Imk-Zl-UeV" id="ddh-pY-EkX"/>
-                                <segue destination="vcQ-hT-62G" kind="show" identifier="addButtonToReceiptTabViewController" id="9rU-Ni-8Wb"/>
-                            </connections>
-                        </barButtonItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Test Title" id="nma-2H-23s">
+                        <barButtonItem key="rightBarButtonItem" title="Add" style="plain" id="DoX-WW-Kfw"/>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="tableView" destination="lO7-Tc-2IH" id="d9T-Qm-8Ix"/>
+                        <outlet property="tableView" destination="lO7-Tc-2IH" id="c3P-cn-6Wg"/>
+                        <segue destination="p3q-Dn-vqT" kind="presentation" identifier="standardToDetail" id="sTl-pa-II8"/>
+                        <segue destination="vcQ-hT-62G" kind="show" identifier="standardToAddTAB" id="1z9-vI-lrQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cKv-fP-er0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2243" y="1464"/>
+            <point key="canvasLocation" x="2234" y="-187.99999999999997"/>
         </scene>
         <!--Category-->
         <scene sceneID="dRv-3b-U1z">
@@ -216,7 +213,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="wAa-ZW-N7R">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="wAa-ZW-N7R">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wAa-ZW-N7R" id="vJn-uN-Rgl">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -233,9 +230,6 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Imk-Zl-UeV" kind="show" id="KQw-pR-nQf"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -243,10 +237,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Category" id="CDS-OF-iMM"/>
+                    <connections>
+                        <segue destination="Imk-Zl-UeV" kind="show" identifier="categoryToStandardSORT" id="Rop-bK-Ejp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZ2-EF-JAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2234" y="116"/>
+            <point key="canvasLocation" x="2234" y="489"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="A9g-Ll-gqo">
@@ -274,11 +271,12 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="MKM-Dp-hCn" id="gX8-MQ-XsP"/>
+                        <segue destination="9K7-g6-gya" kind="presentation" identifier="detailToEdit" id="iIb-Fh-A8C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Wm-gI-rRy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4658" y="1461"/>
+            <point key="canvasLocation" x="4676" y="1453"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cTc-aZ-IQA">
@@ -310,14 +308,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="EX1-XZ-U8c" kind="relationship" relationship="viewControllers" id="JU1-1E-aw0"/>
-                        <segue destination="LIk-ty-NOV" kind="relationship" relationship="viewControllers" id="RKH-YU-Dk4"/>
                         <segue destination="Imk-Zl-UeV" kind="relationship" relationship="viewControllers" id="tLC-gA-p7a"/>
+                        <segue destination="LIk-ty-NOV" kind="relationship" relationship="viewControllers" id="RKH-YU-Dk4"/>
+                        <segue destination="EX1-XZ-U8c" kind="relationship" relationship="viewControllers" id="JU1-1E-aw0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CqS-mG-kvb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1351" y="791"/>
+            <point key="canvasLocation" x="1407" y="770"/>
         </scene>
         <!--Store-->
         <scene sceneID="WU9-mM-TGu">
@@ -377,12 +375,12 @@
                 </navigationItem>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yI-v2-0Aj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2243" y="791"/>
+            <point key="canvasLocation" x="2234" y="1198.9999999999995"/>
         </scene>
         <!--Receipt-->
         <scene sceneID="5Mw-n9-p3L">
             <objects>
-                <viewController id="k2v-ok-BG6" sceneMemberID="viewController">
+                <viewController id="k2v-ok-BG6" customClass="SBReceiptImageViewController" customModule="Slipbook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1iG-s3-Af6"/>
                         <viewControllerLayoutGuide type="bottom" id="bg2-7m-YFr"/>
@@ -395,7 +393,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReceiptCell" rowHeight="150" id="IkA-7P-xcX" customClass="SBDisplayViewCell" customModule="Slipbook" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImageCell" rowHeight="150" id="IkA-7P-xcX" customClass="SBImageCell" customModule="Slipbook" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IkA-7P-xcX" id="NHj-5D-Pn4">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -413,6 +411,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="receiptImage" destination="lrg-cF-9d6" id="f3S-kd-14v"/>
+                                            <outlet property="receiptProductImageView" destination="lrg-cF-9d6" id="Gw8-3K-el3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -427,7 +426,7 @@
                             <constraint firstItem="beI-FD-dIL" firstAttribute="top" secondItem="CjV-P0-pXN" secondAttribute="top" id="w2G-Sp-e8D"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Receipt" id="Gc8-2Y-uLt"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Receipt" id="Gc8-2Y-uLt"/>
                     <navigationItem key="navigationItem" id="rlN-CA-Afl">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="l7w-g3-OTq">
                             <connections>
@@ -436,18 +435,18 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="beI-FD-dIL" id="cdg-zb-j6S"/>
-                        <segue destination="p3q-Dn-vqT" kind="show" identifier="receiptEditReceiptToDetail" id="AbR-zQ-sIq"/>
+                        <outlet property="tableView" destination="beI-FD-dIL" id="We2-gy-kn9"/>
+                        <segue destination="p3q-Dn-vqT" kind="presentation" identifier="receiptEditReceiptToDetail" id="AbR-zQ-sIq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3hD-mi-tJ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3804" y="1461"/>
+            <point key="canvasLocation" x="3804" y="1460.9999999999995"/>
         </scene>
         <!--Product-->
         <scene sceneID="bXD-Ww-UBg">
             <objects>
-                <viewController id="F8p-6T-3kH" customClass="SBDisplayViewController" customModule="Slipbook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="F8p-6T-3kH" customClass="SBProductImageViewController" customModule="Slipbook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XOb-YF-7LV"/>
                         <viewControllerLayoutGuide type="bottom" id="ptq-vv-st3"/>
@@ -460,7 +459,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReceiptCell" rowHeight="150" id="NON-Zb-VCv" customClass="SBDisplayViewCell" customModule="Slipbook" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImageCell" rowHeight="150" id="NON-Zb-VCv" customClass="SBImageCell" customModule="Slipbook" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NON-Zb-VCv" id="XcP-9Y-RdZ">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -477,7 +476,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="receiptImage" destination="g49-sy-dly" id="XBU-os-1Dh"/>
+                                            <outlet property="receiptProductImageView" destination="g49-sy-dly" id="G9t-Ff-iv9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -492,7 +491,7 @@
                             <constraint firstItem="yTg-6t-jXh" firstAttribute="leading" secondItem="yRY-5c-LJ2" secondAttribute="leading" id="eY8-VK-f3q"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Product" id="uTr-v3-yc0"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="Product" id="uTr-v3-yc0"/>
                     <navigationItem key="navigationItem" id="bP2-qN-jy1">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mNc-Eu-xSF">
                             <connections>
@@ -501,20 +500,22 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="yTg-6t-jXh" id="GkR-cW-V1j"/>
-                        <segue destination="p3q-Dn-vqT" kind="show" identifier="receiptEditProductToDetail" id="hQd-F5-QeA"/>
+                        <outlet property="tableView" destination="yTg-6t-jXh" id="qjZ-px-TWw"/>
+                        <segue destination="p3q-Dn-vqT" kind="presentation" identifier="receiptEditProductToDetail" id="hQd-F5-QeA"/>
+                        <segue destination="9K7-g6-gya" kind="show" identifier="productToAdd" id="egv-pF-5PF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sWq-ai-Jpn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3804" y="2147"/>
+            <point key="canvasLocation" x="3804" y="2144"/>
         </scene>
     </scenes>
     <resources>
         <image name="delete" width="20" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tLC-gA-p7a"/>
-        <segue reference="hQd-F5-QeA"/>
+        <segue reference="egv-pF-5PF"/>
+        <segue reference="Rop-bK-Ejp"/>
+        <segue reference="AbR-zQ-sIq"/>
     </inferredMetricsTieBreakers>
 </document>

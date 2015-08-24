@@ -3,12 +3,13 @@
     <entity name="Receipt" representedClassName="Receipt" syncable="YES">
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateTaken" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="image" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productImage" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="receiptImage" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="spent" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="store" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Receipt" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="Receipt" positionX="-63" positionY="-18" width="128" height="148"/>
     </elements>
 </model>

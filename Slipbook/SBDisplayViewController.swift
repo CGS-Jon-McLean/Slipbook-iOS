@@ -12,7 +12,9 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet var tableView: UITableView!
     
-    var local = SBReceiptLocalManager()
+    //var local = SBReceiptLocalManager()
+    var core = SBCoreData()
+    
     var index: Int = 0
     
     var capturedImage: UIImage?
@@ -22,6 +24,7 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
     var storeSort: Bool = false
     var store: String = ""
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
@@ -29,7 +32,7 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.delegate = self
         tableView.dataSource = self
         
-        if(local.doesExist()) {
+        /*if(local.doesExist()) {
             local.load()
             for i in 0..<local.receipts.count {
                 var dict = local.receipts[i]
@@ -45,10 +48,22 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
             //local.addReceipt("Hello", image: imageThing!, dateTaken: "0", spent: "0", category: "0")
             //local.save()
             println("test")
+        }*/
+        
+        println("View loaded")
+        
+        core.loadAndInsert()
+        
+        if self.navigationController == nil {
+            println("nav controller is nil")
         }
         
+        if self.navigationItem.rightBarButtonItem == nil {
+            println("Right button is nil")
+        }
         
-        
+        var addButton = UIBarButtonItem(title: "Add", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("addButtonPressed"))
+        self.tabBarController?.navigationItem.rightBarButtonItem = addButton
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,13 +75,13 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        println(local.receipts.count)
-        return local.receipts.count
+        println(core.countElements())
+        return core.countElements()
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("ReceiptCell", forIndexPath: indexPath) as! SBDisplayViewCell
-        var dict = local.receipts[indexPath.row]
+        var dict = core.receipts[indexPath.row]
         var name = dict["name"] as! String
         var img = dict["image"] as! NSData
         var image = utils.dataToImage(img)
@@ -91,9 +106,13 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
             controller.image = capturedImage
             println("Executed standardToAdd segue")
         }
+        
+        if(segue.identifier == "standardToAddTAB") {
+            // use temp save
+        }
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+    /*func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         picker.dismissViewControllerAnimated(true, completion: nil)
         capturedImage = image
         if(image == nil) {
@@ -123,11 +142,16 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
         }else {
             
         }
-    }
+    }*/
     
     
     @IBAction func switchToAdd(sender: UIBarButtonItem) {
         //performSegueWithIdentifier("standardToAdd", sender: self)
-        openCamera()
+        //openCamera()
+    }
+    
+    func addButtonPressed() {
+        self.performSegueWithIdentifier("standardToAddTAB", sender: self)
+        //openCamera()
     }
 }
