@@ -63,6 +63,8 @@
 		B5B2648A1B7F681200CCF001 /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B264521B7F681200CCF001 /* time.png */; };
 		B5B2648B1B7F681200CCF001 /* upload.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B264531B7F681200CCF001 /* upload.png */; };
 		B5B2648C1B7F681200CCF001 /* user_icon_corner.xml in Resources */ = {isa = PBXBuildFile; fileRef = B5B264541B7F681200CCF001 /* user_icon_corner.xml */; };
+		FC2008D31B8C7C02000693F0 /* SBCategoryDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2008D21B8C7C02000693F0 /* SBCategoryDisplayCell.swift */; };
+		FC2008D51B8C7D45000693F0 /* SBLocalSortCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2008D41B8C7D45000693F0 /* SBLocalSortCache.swift */; };
 		FC5CF0921B7DA17C009324BC /* SlipbookDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC5CF0901B7DA17C009324BC /* SlipbookDataModel.xcdatamodeld */; };
 		FC5CF0941B7DA439009324BC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5CF0931B7DA439009324BC /* CoreData.framework */; };
 		FC6C3F321B6C5F89003C501A /* SBImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C3F311B6C5F89003C501A /* SBImageUtils.swift */; };
@@ -83,7 +85,6 @@
 		FC969C4C1B8065DD00659D6D /* SBLocalTempSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC969C4B1B8065DD00659D6D /* SBLocalTempSave.swift */; };
 		FC969C511B80692A00659D6D /* SBProductImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC969C501B80692A00659D6D /* SBProductImageViewController.swift */; };
 		FC969C551B806E7500659D6D /* SBImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC969C541B806E7500659D6D /* SBImageCell.swift */; };
-		FC969C571B8083C300659D6D /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC969C561B8083C300659D6D /* Receipt.swift */; };
 		FC99F9671B8B1DBA000761CC /* SBReceiptImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99F9661B8B1DBA000761CC /* SBReceiptImageViewController.swift */; };
 		FCF412B61B6DDF210035F5A5 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = FCF412A11B6DDF210035F5A5 /* Contents.json */; };
 		FCF412B71B6DDF210035F5A5 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = FCF412A21B6DDF210035F5A5 /* Icon-40.png */; };
@@ -108,6 +109,7 @@
 		FCF412CC1B6E0D350035F5A5 /* SBShowEditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF412CB1B6E0D350035F5A5 /* SBShowEditInfoViewController.swift */; };
 		FCF4AA6E1B6A1F49005C89F3 /* SBDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF4AA6D1B6A1F49005C89F3 /* SBDisplayViewController.swift */; };
 		FCF4AA701B6A1FE7005C89F3 /* SBReceiptLocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF4AA6F1B6A1FE7005C89F3 /* SBReceiptLocalManager.swift */; };
+		FCF908351B908268005169A2 /* swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF908341B908268005169A2 /* swift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +179,8 @@
 		B5B264521B7F681200CCF001 /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time.png; sourceTree = "<group>"; };
 		B5B264531B7F681200CCF001 /* upload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upload.png; sourceTree = "<group>"; };
 		B5B264541B7F681200CCF001 /* user_icon_corner.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = user_icon_corner.xml; sourceTree = "<group>"; };
+		FC2008D21B8C7C02000693F0 /* SBCategoryDisplayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCategoryDisplayCell.swift; sourceTree = "<group>"; };
+		FC2008D41B8C7D45000693F0 /* SBLocalSortCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBLocalSortCache.swift; sourceTree = "<group>"; };
 		FC5CF0911B7DA17C009324BC /* SlipbookDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SlipbookDataModel.xcdatamodel; sourceTree = "<group>"; };
 		FC5CF0931B7DA439009324BC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FC6C3F311B6C5F89003C501A /* SBImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBImageUtils.swift; sourceTree = "<group>"; };
@@ -201,7 +205,6 @@
 		FC969C4B1B8065DD00659D6D /* SBLocalTempSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBLocalTempSave.swift; sourceTree = "<group>"; };
 		FC969C501B80692A00659D6D /* SBProductImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBProductImageViewController.swift; sourceTree = "<group>"; };
 		FC969C541B806E7500659D6D /* SBImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBImageCell.swift; sourceTree = "<group>"; };
-		FC969C561B8083C300659D6D /* Receipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Receipt.swift; path = ../Receipt.swift; sourceTree = "<group>"; };
 		FC99F9661B8B1DBA000761CC /* SBReceiptImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBReceiptImageViewController.swift; sourceTree = "<group>"; };
 		FCF412A11B6DDF210035F5A5 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		FCF412A21B6DDF210035F5A5 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
@@ -228,6 +231,7 @@
 		FCF4AA6D1B6A1F49005C89F3 /* SBDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SBDisplayViewController.swift; sourceTree = "<group>"; };
 		FCF4AA6F1B6A1FE7005C89F3 /* SBReceiptLocalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBReceiptLocalManager.swift; sourceTree = "<group>"; };
 		FCF4AA711B6A2220005C89F3 /* Slipbook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Slipbook-Bridging-Header.h"; sourceTree = "<group>"; };
+		FCF908341B908268005169A2 /* swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = swift.swift; path = ../swift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,7 +319,6 @@
 		FC6C3F331B6C61D1003C501A /* ignore */ = {
 			isa = PBXGroup;
 			children = (
-				FC969C561B8083C300659D6D /* Receipt.swift */,
 				FCF4AA711B6A2220005C89F3 /* Slipbook-Bridging-Header.h */,
 			);
 			name = ignore;
@@ -343,6 +346,7 @@
 		FC6E13511B64A5950038A7BC /* Slipbook */ = {
 			isa = PBXGroup;
 			children = (
+				FCF908341B908268005169A2 /* swift.swift */,
 				FC969C3B1B7DF4B000659D6D /* phased */,
 				FC6C3F331B6C61D1003C501A /* ignore */,
 				FC5CF0901B7DA17C009324BC /* SlipbookDataModel.xcdatamodeld */,
@@ -361,9 +365,10 @@
 				FC969C4B1B8065DD00659D6D /* SBLocalTempSave.swift */,
 				FC969C501B80692A00659D6D /* SBProductImageViewController.swift */,
 				FC969C541B806E7500659D6D /* SBImageCell.swift */,
+				FC99F9661B8B1DBA000761CC /* SBReceiptImageViewController.swift */,
+				FC2008D41B8C7D45000693F0 /* SBLocalSortCache.swift */,
 				FC6E13521B64A5950038A7BC /* Supporting Files */,
 				FC969C4F1B8068F400659D6D /* incomplete */,
-				FC99F9661B8B1DBA000761CC /* SBReceiptImageViewController.swift */,
 			);
 			path = Slipbook;
 			sourceTree = "<group>";
@@ -408,6 +413,7 @@
 			isa = PBXGroup;
 			children = (
 				FC969C491B80205900659D6D /* SBStoreDisplayCell.swift */,
+				FC2008D21B8C7C02000693F0 /* SBCategoryDisplayCell.swift */,
 				FC969C471B801BD700659D6D /* SBCategoryDisplayViewController.swift */,
 				FC969C451B801B9000659D6D /* SBStoreDisplayViewController.swift */,
 			);
@@ -636,6 +642,7 @@
 				FCF4AA701B6A1FE7005C89F3 /* SBReceiptLocalManager.swift in Sources */,
 				FC6C3F321B6C5F89003C501A /* SBImageUtils.swift in Sources */,
 				FC6C3F9A1B6C8DD0003C501A /* SBSearch.swift in Sources */,
+				FCF908351B908268005169A2 /* swift.swift in Sources */,
 				FC969C461B801B9000659D6D /* SBStoreDisplayViewController.swift in Sources */,
 				FC5CF0921B7DA17C009324BC /* SlipbookDataModel.xcdatamodeld in Sources */,
 				FC6C3F9C1B6CAB18003C501A /* SBAddViewController.swift in Sources */,
@@ -644,7 +651,8 @@
 				FC6C3F3F1B6C7FE6003C501A /* SBNetworking.swift in Sources */,
 				FC969C3D1B7DF4E100659D6D /* SBCoreData.swift in Sources */,
 				FC99F9671B8B1DBA000761CC /* SBReceiptImageViewController.swift in Sources */,
-				FC969C571B8083C300659D6D /* Receipt.swift in Sources */,
+				FC2008D51B8C7D45000693F0 /* SBLocalSortCache.swift in Sources */,
+				FC2008D31B8C7C02000693F0 /* SBCategoryDisplayCell.swift in Sources */,
 				FC969C511B80692A00659D6D /* SBProductImageViewController.swift in Sources */,
 				FC969C4C1B8065DD00659D6D /* SBLocalTempSave.swift in Sources */,
 			);

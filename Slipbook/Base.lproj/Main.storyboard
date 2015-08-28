@@ -115,11 +115,12 @@
                         <outlet property="categoryField" destination="aN1-Qk-blO" id="3Tb-ks-uBd"/>
                         <outlet property="nameField" destination="78g-PQ-14y" id="kUh-z6-2Er"/>
                         <outlet property="storeField" destination="o7g-fw-GRI" id="Jld-q6-Y1S"/>
+                        <segue destination="bAi-Dd-hPc" kind="show" identifier="addToStandard" id="wOw-mI-WBP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fvd-GX-C7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3804" y="790.99999999999977"/>
+            <point key="canvasLocation" x="3184" y="489"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="lcR-h3-Rzd">
@@ -536,8 +537,9 @@
         <image name="delete" width="20" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="79H-Qa-Ibc"/>
+        <segue reference="wOw-mI-WBP"/>
         <segue reference="egv-pF-5PF"/>
-        <segue reference="Rop-bK-Ejp"/>
         <segue reference="AbR-zQ-sIq"/>
     </inferredMetricsTieBreakers>
 </document>

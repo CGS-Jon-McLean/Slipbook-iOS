@@ -13,7 +13,10 @@ class SBStoreDisplayViewController: UIViewController, UITableViewDelegate, UITab
     // MARK: Variables and Outlets
     
     var coreData = SBCoreData()
-    var storeToSortBy: String = ""
+    
+    var stores: Array<String> = []
+    
+    var sortCache = SBLocalSortCache()
     
     @IBOutlet var tableView: UITableView!
     
@@ -25,6 +28,12 @@ class SBStoreDisplayViewController: UIViewController, UITableViewDelegate, UITab
         coreData.loadAndInsert()
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        
+        for i in coreData.receipts {
+            stores.append(i["stores"] as! String)
+        }
+        
+        stores = sortStores(stores)
     }
     
     // MARK: UITableViewDataSource and UITableViewDelegate Implementation
@@ -39,40 +48,27 @@ class SBStoreDisplayViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("StoreCell", forIndexPath: indexPath) as! SBStoreDisplayCell
-        var dict = coreData.receipts[indexPath.row]
-        var storeName = dict["store"] as! String
+        var storeName = stores[indexPath.row]
         cell.addCell(storeName)
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        var cell = tableView.cellForRowAtIndexPath(indexPath) as! SBStoreDisplayCell
-        storeToSortBy = cell.storeLabel.text!
-        
-        self.performSegueWithIdentifier("storeToStandardSORT", sender: self)
-        
+        sortCache.addVariable(stores[indexPath.row], cat: false, sort: true, confirm: true)
+        self.tabBarController!.selectedIndex = 0 // Moves to first view
     }
     
-    // MARK: Segue Preparation Methods
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier == "storeToStandardSORT") {
-            var vc = segue.destinationViewController as! SBDisplayViewController
-            vc.storeSort = true
-            vc.store = self.storeToSortBy
+    func sortStores(stores: Array<String>) -> Array<String>{
+        var new: Array<String> = []
+        for i in stores {
+            if contains(new, i) {
+                // do nothing as it already exists.
+            }else {
+                new.append(i)
+            }
         }
+        return new
     }
-    
-    // MARK: Checkers
-    func checkCells() {
-        /* 
-            * Check if cell currently exists with the same title somewhere else and check how many copies there are. Once this is done delete them all from the table except 1.
-            * Repeat for all cells.
-        */
-    }
-    
-    
     
     
 

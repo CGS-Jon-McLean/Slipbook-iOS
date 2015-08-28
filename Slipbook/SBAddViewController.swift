@@ -143,8 +143,10 @@ class SBAddViewController: UIViewController, UITabBarDelegate {
     func doneButtonAction() {
         if(editMode) {
             core.modifyEntry(index, name: nameField.text, store: storeField.text, category: categoryField.text, spent: amountSpentField.text, productImages: productImages, receiptImage: receiptImages)
+            self.performSegueWithIdentifier("addToStandard", sender: self)
         }else {
             core.save(nameField.text, receiptImage: receiptImages, productImage: productImages, dateTaken: currentDate, spent: amountSpentField.text, category: categoryField.text, store: storeField.text)
+            self.performSegueWithIdentifier("addToStandard", sender: self)
         }
     }
 }
