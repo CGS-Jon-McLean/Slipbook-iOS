@@ -25,6 +25,8 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var sortCache = SBLocalSortCache()
     
+    var searchController: UISearchController!
+    
     var filteredResults: [Dictionary<String, AnyObject>] = []
     
     override func viewDidLoad() {
@@ -50,7 +52,21 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
         self.tabBarController?.navigationItem.rightBarButtonItem = addButton
         
         var searchButton = UIBarButtonItem(title: "Search", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("searchButtonPressed"))
-        self.tabBarController?.navigationItem.rightBarButtonItem = searchButton
+        self.tabBarController?.navigationItem.leftBarButtonItem = searchButton
+        
+        self.tabBarController?.title = "SlipBook"
+        
+        let resultsController = SearchResultsController()
+        resultsController.receipts = core.receipts
+        searchController = UISearchController(searchResultsController: resultsController)
+        
+        let searchBar = searchController.searchBar
+        searchBar.placeholder = "Enter a search term"
+        searchBar.scopeButtonTitles = []
+        //searchBar.text = predefinedSearch
+        searchBar.sizeToFit()
+        tableView.tableHeaderView = searchBar
+        searchController.searchResultsUpdater = resultsController
     }
 
     override func didReceiveMemoryWarning() {
@@ -106,6 +122,8 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func addButtonPressed() {
         self.performSegueWithIdentifier("standardToAddTAB", sender: self)
-        //openCamera()
+    }
+    func searchButtonPressed() {
+        
     }
 }

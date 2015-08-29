@@ -65,6 +65,7 @@
 		B5B2648C1B7F681200CCF001 /* user_icon_corner.xml in Resources */ = {isa = PBXBuildFile; fileRef = B5B264541B7F681200CCF001 /* user_icon_corner.xml */; };
 		FC2008D31B8C7C02000693F0 /* SBCategoryDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2008D21B8C7C02000693F0 /* SBCategoryDisplayCell.swift */; };
 		FC2008D51B8C7D45000693F0 /* SBLocalSortCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2008D41B8C7D45000693F0 /* SBLocalSortCache.swift */; };
+		FC3F05881B91C61700743AAD /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F05871B91C61700743AAD /* SearchResultsController.swift */; };
 		FC5CF0921B7DA17C009324BC /* SlipbookDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC5CF0901B7DA17C009324BC /* SlipbookDataModel.xcdatamodeld */; };
 		FC5CF0941B7DA439009324BC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5CF0931B7DA439009324BC /* CoreData.framework */; };
 		FC6C3F321B6C5F89003C501A /* SBImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C3F311B6C5F89003C501A /* SBImageUtils.swift */; };
@@ -181,6 +182,7 @@
 		B5B264541B7F681200CCF001 /* user_icon_corner.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = user_icon_corner.xml; sourceTree = "<group>"; };
 		FC2008D21B8C7C02000693F0 /* SBCategoryDisplayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCategoryDisplayCell.swift; sourceTree = "<group>"; };
 		FC2008D41B8C7D45000693F0 /* SBLocalSortCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBLocalSortCache.swift; sourceTree = "<group>"; };
+		FC3F05871B91C61700743AAD /* SearchResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsController.swift; sourceTree = "<group>"; };
 		FC5CF0911B7DA17C009324BC /* SlipbookDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SlipbookDataModel.xcdatamodel; sourceTree = "<group>"; };
 		FC5CF0931B7DA439009324BC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FC6C3F311B6C5F89003C501A /* SBImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBImageUtils.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 				FC2008D41B8C7D45000693F0 /* SBLocalSortCache.swift */,
 				FC6E13521B64A5950038A7BC /* Supporting Files */,
 				FC969C4F1B8068F400659D6D /* incomplete */,
+				FC3F05871B91C61700743AAD /* SearchResultsController.swift */,
 			);
 			path = Slipbook;
 			sourceTree = "<group>";
@@ -643,6 +646,7 @@
 				FC6C3F321B6C5F89003C501A /* SBImageUtils.swift in Sources */,
 				FC6C3F9A1B6C8DD0003C501A /* SBSearch.swift in Sources */,
 				FCF908351B908268005169A2 /* swift.swift in Sources */,
+				FC3F05881B91C61700743AAD /* SearchResultsController.swift in Sources */,
 				FC969C461B801B9000659D6D /* SBStoreDisplayViewController.swift in Sources */,
 				FC5CF0921B7DA17C009324BC /* SlipbookDataModel.xcdatamodeld in Sources */,
 				FC6C3F9C1B6CAB18003C501A /* SBAddViewController.swift in Sources */,
