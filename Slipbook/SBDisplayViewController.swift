@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UISearchBarDelegate, UISearchDisplayDelegate {
+class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet var tableView: UITableView!
     
@@ -21,10 +21,7 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var utils = SBImageToData()
     
-    var searchByCat: Bool = false
-    var searchByStore: Bool = false
-    var cat: String = ""
-    var store: String = ""
+    var predefinedSearch:String = ""
     
     var sortCache = SBLocalSortCache()
     
@@ -33,8 +30,6 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
-        
-        println(core.loadAndReturn())
         
         core.loadAndInsert()
         
@@ -56,18 +51,6 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
         
         var searchButton = UIBarButtonItem(title: "Search", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("searchButtonPressed"))
         self.tabBarController?.navigationItem.rightBarButtonItem = searchButton
-        
-        if(sortCache.sort == true) {
-            if(sortCache.cat == true) {
-                searchByCat = true
-                searchByStore = false
-                cat = sortCache.cache
-            }else {
-                searchByCat = false
-                searchByStore = true
-                store = sortCache.cache
-            }
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,27 +62,17 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(true) {
-            return self.filteredResults.count
-        }else{
-            return core.countElements()
-        }
+        return core.countElements()
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("ReceiptCell", forIndexPath: indexPath) as! SBDisplayViewCell
         var dict: Dictionary<String, AnyObject>
         
-        if(true) {
-            dict = filteredResults[indexPath.row]
-        }else{
-            dict = core.receipts[indexPath.row]
-        }
+        dict = core.receipts[indexPath.row]
         
         var name = dict["name"] as! String
-        var img = dict["image"] as! NSData
-        var image = utils.dataToImage(img)
-        cell.addCell(name, image: image)
+        cell.addCell(name)
         return cell
     }
     
@@ -126,49 +99,6 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
-    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
-        filteredResults = SBSearch.searchDictionary(core.receipts, keys: (core.receipts[0] as Dictionary<String, AnyObject>).keys.array, queryString: searchString)!
-        return true
-    }
-    
-    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
-        filteredResults = SBSearch.searchDictionary(core.receipts, keys: (core.receipts[0] as Dictionary<String, AnyObject>).keys.array, queryString: self.searchDisplayController!.searchBar.text)!
-        return true
-    }
-    
-    /*func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
-        picker.dismissViewControllerAnimated(true, completion: nil)
-        capturedImage = image
-        if(image == nil) {
-            var controller = UIAlertController(title: "You need to take a photo", message: "To continue you must take a photo using the camera", preferredStyle: .Alert)
-            var okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: { UIAlertAction in
-                println("Image was nil. Canceling...")
-            })
-            
-            controller.addAction(okAction)
-            self.presentViewController(controller, animated: true, completion: nil)
-            
-        }else {
-            self.performSegueWithIdentifier("standardToAdd", sender: self)
-        }
-        println("Image captured")
-    }
-    
-    func openCamera() {
-        println("Open Camera function run")
-        if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
-            var imag = UIImagePickerController()
-            imag.delegate = self
-            imag.sourceType = UIImagePickerControllerSourceType.Camera
-            imag.allowsEditing = false
-            
-            self.presentViewController(imag, animated: true, completion: nil)
-        }else {
-            
-        }
-    }*/
-    
-    
     @IBAction func switchToAdd(sender: UIBarButtonItem) {
         //performSegueWithIdentifier("standardToAdd", sender: self)
         //openCamera()
@@ -177,9 +107,5 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
     func addButtonPressed() {
         self.performSegueWithIdentifier("standardToAddTAB", sender: self)
         //openCamera()
-    }
-    
-    func searchButtonPressed() {
-        self.searchDisplayController.
     }
 }
