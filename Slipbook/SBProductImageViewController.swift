@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SBProductImageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITabBarDelegate {
+class SBProductImageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITabBarControllerDelegate{
     
     // MARK: Variables and Outlets
     
@@ -28,6 +28,9 @@ class SBProductImageViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         core.loadAndInsert()
+        
+        self.tabBarController!.delegate = self
+        println(self.tabBarController!.toolbarItems)
         
         if(editMode) {
             var dictionary = core.receipts[index]
@@ -50,6 +53,11 @@ class SBProductImageViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Take Photo", style: .Plain, target: self, action: Selector("openCamera"))
+    }
+    
     
     // MARK: - UITableView method implementations
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -61,7 +69,7 @@ class SBProductImageViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("ImageCell", forIndexPath: indexPath) as! SBImageCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("ImageCell", forIndexPath: indexPath) as! SBProductImageCell
         cell.addCell(productImageList[indexPath.row])
         cell.selectionStyle = .None
         return cell
@@ -113,9 +121,12 @@ class SBProductImageViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     // MARK: - Tab Bar Method Implementations
-    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem!) {
+    func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
         cacheFields()
+        println("didSelectedViewController")
+    
     }
+    
     
     
     // MARK: - Other Functions
@@ -125,6 +136,7 @@ class SBProductImageViewController: UIViewController, UITableViewDelegate, UITab
     
     func cacheFields() {
         tempStore.save(nil, category: nil, spent: nil, store: nil, productImages: productImageList, receiptImages: nil)
+        //println(self.productImageList)
     }
 
 

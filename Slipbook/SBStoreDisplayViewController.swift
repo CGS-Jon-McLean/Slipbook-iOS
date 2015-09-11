@@ -30,7 +30,7 @@ class SBStoreDisplayViewController: UIViewController, UITableViewDelegate, UITab
         self.tableView.delegate = self
         
         for i in coreData.receipts {
-            stores.append(i["stores"] as! String)
+            stores.append(i["store"] as! String)
         }
         
         stores = sortStores(stores)
@@ -43,7 +43,7 @@ class SBStoreDisplayViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return coreData.countElements()
+        return stores.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -55,6 +55,8 @@ class SBStoreDisplayViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         sortCache.addVariable(stores[indexPath.row], cat: false, sort: true, confirm: true)
+        println(sortCache.sort)
+        
         self.tabBarController!.selectedIndex = 0 // Moves to first view
     }
     

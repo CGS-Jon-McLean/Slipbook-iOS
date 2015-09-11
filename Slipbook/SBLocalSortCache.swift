@@ -18,12 +18,16 @@ class SBLocalSortCache {
     func addVariable(string: String, cat: Bool, sort: Bool,  confirm: Bool) {
         if(confirm) {
             self.cache = string
+            self.sort = sort
+            self.save()
+            println("Cache: " + cache)
         }else {
             // do nothing
         }
     }
     
     private func save() {
+        println("Saved")
         ud.setValue(cache, forKey: "sort_cache")
         ud.setValue(cat, forKey: "sort_cache_category")
         ud.setValue(sort, forKey: "sort_cache_sort")
@@ -36,6 +40,12 @@ class SBLocalSortCache {
             cat = ud.valueForKey("sort_cache_category") as! Bool
             sort = ud.valueForKey("sort_cache_sort") as! Bool
         }else { }
+    }
+    
+    func removeCaches() {
+        ud.removeObjectForKey("sort_cache")
+        ud.removeObjectForKey("sort_cache_category")
+        ud.removeObjectForKey("sort_cache_sort")
     }
     
 }

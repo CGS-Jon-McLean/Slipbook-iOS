@@ -35,6 +35,8 @@ class SBCoreData {
             productImageData.append(utils.imageToData(i))
         }
         
+        println(imageData)
+        
         newReceipt.setValue(name, forKey: "name")
         newReceipt.setValue(dateTaken, forKey: "dateTaken")
         newReceipt.setValue(spent, forKey: "spent")
@@ -43,7 +45,13 @@ class SBCoreData {
         newReceipt.setValue(store, forKey: "store")
         newReceipt.setValue(productImageData, forKey: "productImage")
         
-        context.save(nil)
+        var error: NSError?
+        
+        context.save(&error)
+        
+        if(error != nil) {
+            println(error!.localizedDescription)
+        }
         
         self.loadAndInsert()
     }

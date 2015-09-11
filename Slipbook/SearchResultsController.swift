@@ -17,6 +17,8 @@ class SearchResultsController: UITableViewController, UISearchResultsUpdating {
     
     var predefinedSearch = "";
     
+    var sortCache = SBLocalSortCache()
+    
     override func viewDidLoad() {
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "potatoface")
     }
@@ -27,7 +29,6 @@ class SearchResultsController: UITableViewController, UISearchResultsUpdating {
         filteredReceipts.removeAll(keepCapacity: true)
         
         filteredReceipts = SBSearch.searchDictionary(receipts, keys: ["name","category","spent"], queryString: searchString)!
-//      filteredReceipts = receipts
         
         tableView.reloadData()
     }

@@ -38,7 +38,7 @@ class SBAddViewController: UIViewController, UITabBarDelegate {
         super.viewDidLoad()
         
         // Done button
-        self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: Selector("doneButtonAction"))
+        self.tabBarController!.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: Selector("doneButtonAction"))
         
         // Tap Recognizer
         var tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
@@ -49,6 +49,27 @@ class SBAddViewController: UIViewController, UITabBarDelegate {
             dateFormatter.dateFormat = "dd/MM/yy"
             stringDate = dateFormatter.stringFromDate(currentDate)
             println(stringDate)
+            if(tempStore.doesExist()) {
+                println("idk")
+                tempStore.load()
+                println("loaded")
+                var dictionary = tempStore.dictionary
+                println("var dictionary")
+                //println(dictionary)
+                println("Finish printing viewDidLoad dictionary")
+                var productImageData = dictionary["productImages"] as! Array<NSData>
+                var receiptImageData = dictionary["receiptImages"] as! Array<NSData>
+                
+                for i in productImageData {
+                    productImages.append(utils.dataToImage(i))
+                }
+                
+                for i in receiptImageData {
+                    receiptImages.append(utils.dataToImage(i))
+                }
+                
+                //println(receiptImages)
+            }
         }else {
             println(index)
             // load data into fields
@@ -104,12 +125,39 @@ class SBAddViewController: UIViewController, UITabBarDelegate {
         }
     }
     
-    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem!) {
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: Selector("doneButtonAction"))
+        if(tempStore.doesExist()) {
+            println("idk")
+            tempStore.load()
+            println("loaded")
+            var dictionary = tempStore.dictionary
+            println("var dictionary 2")
+            println(dictionary)
+            println("Finish printing viewDidLoad dictionary")
+            var productImageData = dictionary["productImages"] as! Array<NSData>
+            var receiptImageData = dictionary["receiptImages"] as! Array<NSData>
+            
+            for i in productImageData {
+                productImages.append(utils.dataToImage(i))
+            }
+            
+            for i in receiptImageData {
+                println("receipt images \(receiptImageData)") // will only run if there is data inside the array
+                receiptImages.append(utils.dataToImage(i))
+            }
+            
+            //println(receiptImages)
+        }
+    }
+    
+    /*func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem!) {
         if(item.tag != 1) {
             self.cacheFields()
         }else {
         }
-    }
+    }*/
     
     func dismissKeyboard() {
         self.view.endEditing(true)
@@ -146,6 +194,7 @@ class SBAddViewController: UIViewController, UITabBarDelegate {
             self.performSegueWithIdentifier("addToStandard", sender: self)
         }else {
             core.save(nameField.text, receiptImage: receiptImages, productImage: productImages, dateTaken: currentDate, spent: amountSpentField.text, category: categoryField.text, store: storeField.text)
+            println("Receipt Images: \(receiptImages)") // prints empty array
             self.performSegueWithIdentifier("addToStandard", sender: self)
         }
     }

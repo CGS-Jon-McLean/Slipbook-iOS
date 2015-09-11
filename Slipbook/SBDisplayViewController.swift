@@ -23,8 +23,6 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var predefinedSearch:String = ""
     
-    var sortCache = SBLocalSortCache()
-    
     var searchController: UISearchController!
     
     var filteredResults: [Dictionary<String, AnyObject>] = []
@@ -34,6 +32,9 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
         self.navigationItem.setHidesBackButton(true, animated: true)
         
         core.loadAndInsert()
+        tableView.reloadData()
+        
+        println("hiuy9wijopuw")
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -51,22 +52,34 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
         var addButton = UIBarButtonItem(title: "Add", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("addButtonPressed"))
         self.tabBarController?.navigationItem.rightBarButtonItem = addButton
         
-        var searchButton = UIBarButtonItem(title: "Search", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("searchButtonPressed"))
-        self.tabBarController?.navigationItem.leftBarButtonItem = searchButton
-        
         self.tabBarController?.title = "SlipBook"
         
         let resultsController = SearchResultsController()
         resultsController.receipts = core.receipts
         searchController = UISearchController(searchResultsController: resultsController)
+
+        
+        println("search term" + predefinedSearch)
         
         let searchBar = searchController.searchBar
         searchBar.placeholder = "Enter a search term"
         searchBar.scopeButtonTitles = []
-        //searchBar.text = predefinedSearch
         searchBar.sizeToFit()
         tableView.tableHeaderView = searchBar
         searchController.searchResultsUpdater = resultsController
+        
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        var sortCache = SBLocalSortCache()
+        println("View did appear")
+        println("Sort: \(sortCache.sort)")
+        if(sortCache.sort) {
+            println("test sort thing \(sortCache.sort)")
+            setSearchBarText(sortCache.cache)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -95,13 +108,21 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Cell found at \(indexPath.row) selected")
         index = indexPath.row
+        
+        var tStore = SBDetailViewStore()
+        tStore.addObject(index, isIndexParam: true)
+        
         performSegueWithIdentifier("standardToDetail", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "standardToDetail") {
-            var controller = segue.destinationViewController as! SBDetailViewController
-            controller.index = index
+            //var controller = segue.destinationViewController as! SBDetailViewController
+            //controller.index = index
+            var tStore = SBDetailViewStore()
+            println(tStore.object)
+            
+            //tStore.addObject(index, isIndexParam: true)
         }
         
         if(segue.identifier == "standardToAdd") {
@@ -125,5 +146,14 @@ class SBDisplayViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     func searchButtonPressed() {
         
+    }
+    
+    func setSearchBarText(text: String){
+        var sortCache = SBLocalSortCache()
+        println("Cache display: " + sortCache.cache)
+        println("test \(text)")
+        var searchBar = searchController.searchBar
+        searchBar.text = text
+        searchBar.becomeFirstResponder()
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SBReceiptImageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITabBarDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class SBReceiptImageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITabBarControllerDelegate{
     
     // MARK: Variables and Outlets
     
@@ -25,12 +25,18 @@ class SBReceiptImageViewController: UIViewController, UITableViewDelegate, UITab
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        self.tabBarController!.delegate = self
+        
+        self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Take Photo", style: .Plain, target: self, action: Selector("openCamera"))
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Take Photo", style: .Plain, target: self, action: Selector("openCamera"))
     }
     
     // MARK: - Table View DataSource/Delegate method implementations
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("ImageCell", forIndexPath: indexPath) as! SBImageCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("ImageCell", forIndexPath: indexPath) as! SBReceiptImageCell
         cell.addCell(receiptImagesList[indexPath.row])
         return cell
     }
@@ -77,13 +83,15 @@ class SBReceiptImageViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     // MARK: - Tab Bar Delegate method implementations
-    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem!) {
+    func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
         self.cacheFields()
     }
     
     // MARK: - Other Methods
     func cacheFields() {
         cache.save(nil, category: nil, spent: nil, store: nil, productImages: nil, receiptImages: receiptImagesList)
+        //println(receiptImagesList)
+        //println("Cache fields")
     }
     
     
